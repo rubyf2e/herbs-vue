@@ -1,0 +1,44 @@
+header{
+    flex: 1;
+}
+
+footer{
+    .footer{
+        .container{
+            width:100%; 
+            text-align: center;
+            .title{
+                padding: 1% 0 1% 0;
+                width: 100%;
+                text-align: center;
+                color:$font-color3;
+                display: flex;
+                align-items:flex-end;
+                justify-content:center;
+                .icon{
+                    display: flex;
+                    align-items:flex-end;
+                    width: 1.5%;
+                    width: 23px;
+                    margin: 0 0 0 1% ;
+                }     
+            }
+
+
+        }
+    }
+}
+
+
+@media screen and (max-width: $ipad-max-width) {
+    footer{
+        .footer{
+            .container{
+                .title{
+                    padding: 3% 0 1% 0;
+                }
+            }
+        }
+    }
+}
+
