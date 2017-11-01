@@ -30,12 +30,26 @@ footer{
 }
 
 
+
+
 @media screen and (max-width: $ipad-max-width) {
     footer{
         .footer{
             .container{
                 .title{
                     padding: 3% 0 1% 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: $ipad-max-width){
+    footer{
+        .footer{
+            .container{
+                .title{
+                    padding: 2% 0 1% 0;
                 }
             }
         }

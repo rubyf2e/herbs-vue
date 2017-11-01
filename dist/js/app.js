@@ -22468,8 +22468,10 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       self.target = document.getElementById("words").contentDocument;
       self.targetSvg = self.target.querySelector("svg");
       self.targetPath = self.targetSvg.querySelectorAll("path");
-      self.words();
-    }, 100);
+      setTimeout(function () {
+        self.words();
+      }, 100);
+    }, 200);
   },
 
   computed: {
@@ -22478,7 +22480,12 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
     }
   },
   methods: {
+    getRandom: function getRandom(min, max) {
+      return Math.random() * (max - min) + min;
+    },
     words: function words() {
+      var self = this;
+
       for (var i = 0; i < this.targetPath.length; i++) {
         this.targetPath[i].setAttribute('stroke', '#FFFFFF');
       }
@@ -22496,9 +22503,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
       $.each(this.targetPath, function (i, el) {
         tl.set($(this), {
-          x: '+=' + getRandom(-500, 500),
-          y: '+=' + getRandom(-500, 500),
-          rotation: '+=' + getRandom(-720, 720),
+          x: '+=' + self.getRandom(-500, 500),
+          y: '+=' + self.getRandom(-500, 500),
+          rotation: '+=' + self.getRandom(-720, 720),
           scale: 0,
           opacity: 0
         });
@@ -22521,10 +22528,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
       }, function () {
         tl.timeScale(1.5);
       });
-
-      function getRandom(min, max) {
-        return Math.random() * (max - min) + min;
-      }
     }
   }
 });
@@ -42723,7 +42726,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         self.setMove = setInterval(self.move, 10);
         self.setMove2 = setInterval(self.move2, 10);
       });
-    }, 100);
+    }, 200);
   },
 
 

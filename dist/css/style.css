@@ -5191,6 +5191,10 @@ footer .footer .container {
   footer .footer .container .title {
     padding: 3% 0 1% 0; } }
 
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  footer .footer .container .title {
+    padding: 2% 0 1% 0; } }
+
 .mobile-nav {
   position: fixed;
   z-index: 10;
@@ -5375,7 +5379,7 @@ footer .footer .container {
           width: 100%;
           height: 100%; }
       .container.detail .box .detailBox .detail {
-        padding: 1% 3%;
+        padding: 1% 3% 2% 3%;
         box-shadow: 2px -3px 10px -2px #9cc7c3; }
         .container.detail .box .detailBox .detail .title {
           display: -ms-flexbox;
